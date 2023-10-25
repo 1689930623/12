@@ -1,0 +1,14 @@
+import time
+
+def focus_timer():
+    start_time = time.time()
+    
+    while True:
+        elapsed_time = int(time.time() - start_time)
+        minutes = elapsed_time // 60
+        seconds = elapsed_time % 60
+        print(f"Elapsed Time: {minutes:02d}:{seconds:02d}", end="\r")
+        time.sleep(1)
+
+# 开始无限专注时钟
+focus_timer()
